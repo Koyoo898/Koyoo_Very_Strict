@@ -1,34 +1,3 @@
-#--------------------------
-# Rings, Amulets, Belts
-#--------------------------
-
-Show
-Rarity Normal
-Class "Amulets" "Belts"
-SetFontSize 35
-
-Show
-Class "Rings" "Amulets"
-Rarity Magic
-SetFontSize 35
-
-Show
-Class "Rings" 
-Rarity Normal
-BaseType "Iron Ring" "Lazuli Ring" "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Amethyst Ring" "Emerald Ring" "Pearl Ring" "Prismatic Ring" "Gold Ring" "Unset Ring"
-SetFontSize 35
-
-Show
-Class "Rings"
-Rarity Normal
-BaseType "Breach Ring"
-SetBackgroundColor 235 62 233
-SetTextColor 255 255 255
-SetBorderColor 255 255 255
-
-#--------------------------
-# Unique
-#--------------------------
 Show
 Rarity Unique
 BaseType "Heavy Belt" "Crude Bow" "Long Quarterstaff" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet"
@@ -62,10 +31,7 @@ PlayEffect Brown
 MinimapIcon 2 Brown Star
 SetFontSize 40
 
-#--------------------------
-# Style for best currency
-#--------------------------
-
+## Divine Orb Style
 Show
 Class "Currency"
 BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"  "Greater Jeweller's Orb"
@@ -302,7 +268,7 @@ SetFontSize 40
 Show
 BaseType "Waystone" 
 Rarity <= Rare
-WaystoneTier > 12
+WaystoneTier > 13
 SetFontSize 45
 SetTextColor 0 0 0 255
 SetBackgroundColor 235 235 235 255
@@ -312,7 +278,7 @@ MinimapIcon 1 Red Square
 
 Hide
 BaseType "Waystone"
-WaystoneTier <= 12
+WaystoneTier <= 13
 
 Show
 BaseType "Logbook"
@@ -337,10 +303,39 @@ SetBorderColor 233 206 75
 PlayEffect Yellow
 MinimapIcon 1 Yellow Diamond
 
+#--------------------------
+# Rings, Amulets, Belts
+#--------------------------
+
+Show
+Rarity Normal
+Class "Amulets" "Belts"
+SetFontSize 35
+
+Show
+Class "Rings" "Amulets"
+Rarity Magic
+SetFontSize 35
+
+Show
+Class "Rings" 
+Rarity Normal
+BaseType "Iron Ring" "Lazuli Ring" "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Amethyst Ring" "Emerald Ring" "Pearl Ring" "Prismatic Ring" "Gold Ring" "Unset Ring"
+SetFontSize 35
+
+Show
+Class "Rings"
+Rarity Normal
+BaseType "Breach Ring"
+SetBackgroundColor 235 62 233
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+
 
 #--------------------------
 # Salvagable Items
 #--------------------------
+
 
 Hide
 Quality > 10
@@ -353,4 +348,66 @@ Quality > 10
 Rarity Magic
 SetBorderColor 0 0 200
 SetFontSize 35
+
+#--------------------------
+# OPTIONAL RULES
+#--------------------------
+
+Show
+Rarity = Rare
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Quarter" "Crossbows" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Bows"
+AreaLevel >= 65
+SetFontSize 32
+
+Hide
+Rarity = Rare
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Quarter" "Crossbows" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Bows"
+AreaLevel >= 65
+SetFontSize 32
+
+Show
+Rarity = Rare
+Class = "Cross"
+AreaLevel >= 65
+SetFontSize 30
+
+Show
+Rarity = Rare
+Class = "Bows" "Belt" "Quiver"
+SetFontSize 45
+SetBorderColor 0 240 190 255
+SetBackgroundColor 20 20 0 255
+
+Show
+Rarity = Rare
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Quarter" "Crossbows" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Bows"
+AreaLevel >= 65
+SetFontSize 32
+
+Hide
+Rarity = Rare
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Quarter" "Crossbows" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Bows"
+AreaLevel >= 65
+SetFontSize 32
+
+
+Show
+Rarity = Rare
+Class = "Bows" "Belt" "Quiver"
+SetFontSize 45
+SetBorderColor 0 240 190 255
+SetBackgroundColor 20 20 0 255
+
+Hide
+Rarity <= Magic
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Quarter" "Crossbow" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Bows"
+AreaLevel >= 65
+
+
+Hide
+Rarity <= Magic
+Class "Currency"
+BaseType "rune"
+AreaLevel >= 65
+
 
